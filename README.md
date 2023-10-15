@@ -20,7 +20,7 @@ This API allows you to manage contacts and user-related operations. The API is b
 ### 1.1 API Features
 
 - **Contact Management**: Create, read, update, and delete contacts.
-- **User Authentication**: Sign up, log in, and delete user accounts.
+- **User Authentication**: Sign up, log in, and delete user accounts. Some Routes like Delete, Update, and Post for contacts are protected by JWT
 
 ## 2. Installation
 
@@ -28,8 +28,7 @@ Follow these steps to set up and install the Express.js Contact Management API:
 
 1. Clone the GitHub repository to your local machine.
 
-   ```bash
-    https://github.com/rkipchumba/express-contact-api.git
+      https://github.com/rkipchumba/express-contact-api.git
 
 2. Install project dependencies using npm.
     ```bash
@@ -42,10 +41,22 @@ Follow these steps to set up and install the Express.js Contact Management API:
 
 To run the Express.js server, execute the following command:
 
-    ```bash
+  
     npm start
 
 The server will start on the default port, typically http://localhost:3000.
+### Usage
+## Make sure to also add your Mongo Atlas Admin Username to a nodemon.json file (which you have to create).
+   
+     
+      {
+       "env": {
+           "MONGO_ATLAS_PW": "YOUR_MONGO_USER_PW",
+           "JWT_KEY": "your jwt key"
+       }
+      }
+
+
 
 ## 4.  API Endpoints
 
